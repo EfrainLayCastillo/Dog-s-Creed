@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-sm-4 col-xs-12">
+      <h2>Subir nuevo post</h2>
+      {{#if hasErrors}}
+        <div class="alert alert-danger">
+          {{#each messages}}
+            <p>{{this}}</p>
+          {{/each}}
+        </div>
+      {{/if}}
+      <div class="Register_User">
+        <form action="/admin/post" method="post">
+          <div class="form-group">
+            <label for="text">Titulo</label>
+            <input type="text" class="form-control" id="text" name="titulo" placeholder="Titulo">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" id="exampleInputFile" name="archivo">
+            <p class="help-block">Example block-level help text here.</p>
+          </div>
+          <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+          <button type="submit" value="Guardar" class="btn btn-default">Enviar</button>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>

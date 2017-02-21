@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+  {{#each Event_items}}
+  <div class="col-md-6 col-sm-6 col-xs-12">
+    <div class="events_body">
+      <div class="media">
+        <div class="media-left">
+          <a href="#">
+            <img class="media-object" style="width:110px;" src="{{this.img_event}}" alt="...">
+          </a>
+        </div>
+        <div class="media-body">
+        <a href=""><h3 class="media-heading Dev_title"><span class="glyphicon glyphicon-calendar"></span> {{this.titulo}}</h3></a>
+        <h5><i>02/15/2017</i><b> 11:28 PM</b></h5>
+          <p>
+            {{this.informacion}}
+          </p>
+          <blockquote>
+          <small  style="font-size:12px;">Por: <cite title="Nombre Apellidos">{{this.autor}}</cite></small>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+  </div>
+</div>
